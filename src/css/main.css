@@ -3,37 +3,55 @@ body {
   padding: 0;
   margin: 0; }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 200px 200px 200px;
-  justify-content: space-evenly;
-  background-color: #1e1e1e;
-  padding: 15px;
-  gap: 15px; }
-  .grid-container .grid-item {
-    background-color: rgba(200, 200, 200, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    width: 300px;
-    height: 200px;
-    font-size: 30px;
-    text-align: center; }
-    .grid-container .grid-item img {
-      margin: 25px 75px 25px 75px;
-      width: 150px;
-      transition: width 0.5s easy-in; }
-    .grid-container .grid-item:hover {
-      background-color: rgba(200, 200, 200, 0.9); }
-      .grid-container .grid-item:hover img {
-        margin: 10px 60px 10px 60px;
-        width: 180px; }
+footer {
+  background-color: #27272f;
+  color: white;
+  font-family: helvetica;
+  padding: 20px;
+  text-align: center; }
 
-.html5-badge {
-  background: url(/img/html5.png) no-repeat;
-  background-size: 100%;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  margin-left: -2px;
-  position: relative;
-  top: 3px; }
+.main {
+  padding: 5% 2%;
+  background-color: #424250; }
+  .main header {
+    background-color: #27272f;
+    height: 15px; }
+  .main .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px 200px 200px;
+    justify-content: space-evenly;
+    background-color: #363640;
+    padding: 15px 0;
+    gap: 15px;
+    border-top: 25px #27272f solid; }
+    .main .grid-container .grid-item {
+      background-color: #515159;
+      width: 300px;
+      height: 200px;
+      font-size: 30px;
+      text-align: center; }
+      .main .grid-container .grid-item img {
+        margin: 25px 75px 25px 75px;
+        height: 150px;
+        transition: height 0.5s easy-in; }
+      .main .grid-container .grid-item:hover img {
+        margin: 10px 60px 10px 60px;
+        height: 180px; }
+  .main .html5-badge {
+    background: url(/img/html5.png) no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-left: -2px;
+    position: relative;
+    top: 3px; }
+
+@media only screen and (min-width: 600px) {
+  .main .grid-container {
+    grid-template-columns: auto auto; } }
+
+@media only screen and (min-width: 768px) {
+  .main .grid-container {
+    grid-template-columns: auto auto auto auto; } }
