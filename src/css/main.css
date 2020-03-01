@@ -38,15 +38,43 @@ footer {
       .main .grid-container .grid-item:hover img {
         margin: 10px 60px 10px 60px;
         height: 180px; }
-  .main .html5-badge {
-    background: url(/img/html5.png) no-repeat;
-    background-size: 100%;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    margin-left: -2px;
-    position: relative;
-    top: 3px; }
+
+.data {
+  color: #fff;
+  background-color: #343a40; }
+
+table td,
+table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  border-top-color: #dee2e6; }
+
+thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  border-bottom-color: #dee2e6;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-top-color: #dee2e6;
+  border-color: #454d55;
+  text-align: inherit;
+  box-sizing: inherit;
+  border-collapse: collapse;
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400; }
+
+.html5-badge {
+  background: url(/img/html5.png) no-repeat;
+  background-size: 100%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: -2px;
+  position: relative;
+  top: 3px; }
 
 @media only screen and (min-width: 600px) {
   .main .grid-container {
