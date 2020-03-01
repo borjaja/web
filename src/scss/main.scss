@@ -57,13 +57,16 @@ footer {
   }
 }
 
-.html5-badge {
+.html5 {
+  width: 20%;
+}
+.html5::after {
+  content: "";
   background: url(/img/html5.png) no-repeat;
   background-size: 100%;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: inline-block;
-  margin-left: -2px;
   position: relative;
   top: 3px;
 }
@@ -86,6 +89,9 @@ table {
     }
   }
   tbody {
+    > tr:nth-of-type(2n + 1) {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
     tr {
       td {
         border-top: 1px solid #454d55;
