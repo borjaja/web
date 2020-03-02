@@ -1,10 +1,12 @@
+*,
 html,
 body {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: Verdana, sans-serif;
-  font-size: 15px;
-  line-height: 1.5; }
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif; }
 
 footer {
   background-color: #27272f;
@@ -13,70 +15,82 @@ footer {
   padding: 20px;
   text-align: center; }
 
-.main {
-  padding: 5% 2%;
+.array {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 15px;
+  padding: 30px;
+  background: #32333d;
+  border-top: 30px #27272f solid; }
+  .array div {
+    height: 240px;
+    background-color: #373740; }
+    .array div:hover {
+      background-color: #336a90; }
+      .array div:hover img {
+        height: 220px;
+        margin: 10px auto; }
+    .array div img {
+      height: 160px;
+      display: block;
+      margin: 40px auto;
+      transition: 0.5s ease; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+  margin-left: 16px;
+  margin-right: 16px; }
+  @media only screen and (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 24px;
+      row-gap: 24px;
+      margin-left: 24px;
+      margin-right: 24px; } }
+  @media only screen and (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(12, 1fr); } }
+  .grid .all {
+    grid-column: span 4; }
+    @media only screen and (min-width: 600px) {
+      .grid .all {
+        grid-column: span 8; } }
+    @media only screen and (min-width: 768px) {
+      .grid .all {
+        grid-column: span 12; } }
+  .grid .full {
+    grid-column: span 4;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media only screen and (min-width: 600px) {
+      .grid .full {
+        grid-column: span 8;
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px; } }
+    @media only screen and (min-width: 768px) {
+      .grid .full {
+        grid-column: span 12; } }
+
+body {
   background-color: #424250; }
-  .main header {
-    background-color: #27272f;
-    height: 15px; }
-  .main .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 200px 200px 200px;
-    justify-content: space-evenly;
-    background-color: #363640;
-    padding: 15px 0;
-    gap: 15px;
-    border-top: 25px #27272f solid; }
-    .main .grid-container .grid-item {
-      background-color: #515159;
-      width: 300px;
-      height: 200px;
-      font-size: 30px;
-      text-align: center; }
-      .main .grid-container .grid-item img {
-        margin: 25px 75px 25px 75px;
-        height: 150px;
-        transition: height 0.5s easy-in; }
-      .main .grid-container .grid-item:hover img {
-        margin: 10px 60px 10px 60px;
-        height: 180px; }
 
-.html5 {
-  width: 20%; }
-
-.html5::after {
-  content: "";
-  background: url(/img/html5.png) no-repeat;
-  background-size: 100%;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  position: relative;
-  top: 3px; }
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #fff;
-  background-color: #343a40; }
-  table thead tr th {
-    text-align: inherit;
-    border-top: 1px solid #454d55;
-    padding: 0.75rem;
-    vertical-align: bottom;
-    border-bottom: 2px solid #454d55; }
-  table tbody > tr:nth-of-type(2n + 1) {
-    background-color: rgba(255, 255, 255, 0.05); }
-  table tbody tr td {
-    border-top: 1px solid #454d55;
-    padding: 0.75rem; }
-
-@media only screen and (min-width: 600px) {
-  .main .grid-container {
-    grid-template-columns: auto auto; } }
-
-@media only screen and (min-width: 768px) {
-  .main .grid-container {
-    grid-template-columns: auto auto auto auto; } }
+h2 {
+  height: 52px; }
+  h2 img {
+    position: absolute;
+    width: 160px;
+    z-index: -1;
+    margin-top: -80px;
+    margin-left: -80px;
+    top: 10%;
+    left: 50%;
+    top: 5rem; }

@@ -10,7 +10,7 @@ function style() {
 };
 
 function watch() {
-    browserSync.init(['src/*.html', 'src/js/**/*.js'], {
+    browserSync.init(['src/**/*.html', 'src/js/**/*.js'], {
         server: {
             baseDir: "./src",
             index: "index.html"
