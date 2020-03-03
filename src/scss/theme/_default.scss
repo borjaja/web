@@ -8,10 +8,35 @@ body {
   line-height: 1.5;
   font-family: $font;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: lightseagreen;
+  }
+  &:active {
+    color: slategrey;
+  }
+  &:visited {
+    color: #336a90;
+  }
+}
+
 footer {
   background-color: #27272f;
   color: white;
   font-family: helvetica;
   padding: 20px;
   text-align: center;
+}
+
+body {
+  background-color: #424250;
 }

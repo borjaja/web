@@ -6,7 +6,21 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Helvetica, Arial, sans-serif; }
+
+li {
+  list-style: none; }
+
+a {
+  color: white;
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    color: lightseagreen; }
+  a:active {
+    color: slategrey; }
+  a:visited {
+    color: #336a90; }
 
 footer {
   background-color: #27272f;
@@ -14,6 +28,86 @@ footer {
   font-family: helvetica;
   padding: 20px;
   text-align: center; }
+
+body {
+  background-color: #424250; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: #373740;
+  border: 1px solid #373740; }
+  table thead tr th {
+    text-align: inherit;
+    border-top: 1px solid #32333d;
+    padding: 0.75rem;
+    vertical-align: bottom;
+    border-bottom: 2px solid #32333d; }
+  table tbody > tr:nth-of-type(2n + 1) {
+    background-color: #32333d; }
+  table tbody tr td {
+    border-top: 1px solid #32333d;
+    padding: 0.75rem; }
+    table tbody tr td.html5 {
+      position: relative;
+      margin-right: 2em; }
+    table tbody tr td.html5::after {
+      content: "";
+      background: url(/img/logos/html-5.svg) no-repeat;
+      background-size: auto;
+      background-size: 100%;
+      width: 2.9em;
+      height: 1.6em;
+      display: inline-block;
+      position: absolute;
+      right: -0.4em;
+      bottom: 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+  margin-left: 16px;
+  margin-right: 16px; }
+  @media only screen and (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 24px;
+      row-gap: 24px;
+      margin-left: 24px;
+      margin-right: 24px; } }
+  @media only screen and (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(12, 1fr); } }
+  .grid .all {
+    display: block;
+    grid-column: span 4; }
+    @media only screen and (min-width: 600px) {
+      .grid .all {
+        grid-column: span 8; } }
+    @media only screen and (min-width: 768px) {
+      .grid .all {
+        grid-column: span 12; } }
+  .grid .full {
+    display: block;
+    grid-column: span 4;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px; }
+    @media only screen and (min-width: 600px) {
+      .grid .full {
+        grid-column: span 8;
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px; } }
+    @media only screen and (min-width: 768px) {
+      .grid .full {
+        grid-column: span 12; } }
 
 .array {
   display: grid;
@@ -38,50 +132,10 @@ footer {
       margin: 40px auto;
       transition: 0.5s ease; }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 16px;
-  row-gap: 16px;
-  margin-left: 16px;
-  margin-right: 16px; }
-  @media only screen and (min-width: 600px) {
-    .grid {
-      grid-template-columns: repeat(8, 1fr);
-      column-gap: 24px;
-      row-gap: 24px;
-      margin-left: 24px;
-      margin-right: 24px; } }
-  @media only screen and (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(12, 1fr); } }
-  .grid .all {
-    grid-column: span 4; }
-    @media only screen and (min-width: 600px) {
-      .grid .all {
-        grid-column: span 8; } }
-    @media only screen and (min-width: 768px) {
-      .grid .all {
-        grid-column: span 12; } }
-  .grid .full {
-    grid-column: span 4;
-    margin-left: -16px;
-    margin-right: -16px;
-    padding-left: 16px;
-    padding-right: 16px; }
-    @media only screen and (min-width: 600px) {
-      .grid .full {
-        grid-column: span 8;
-        margin-left: -24px;
-        margin-right: -24px;
-        padding-left: 24px;
-        padding-right: 24px; } }
-    @media only screen and (min-width: 768px) {
-      .grid .full {
-        grid-column: span 12; } }
-
-body {
-  background-color: #424250; }
+.browsers td {
+  width: 100%; }
+  .browsers td .browsers__img {
+    width: 25px; }
 
 h2 {
   height: 52px; }
@@ -94,3 +148,12 @@ h2 {
     top: 10%;
     left: 50%;
     top: 5rem; }
+
+.tags h2 {
+  font-size: 32px;
+  color: white;
+  line-height: 2em; }
+
+.tags code {
+  font-family: monospace;
+  padding-right: 25px; }

@@ -3,47 +3,46 @@ table {
   width: 100%;
   margin-bottom: 1rem;
   color: #fff;
-  background-color: #343a40;
+  background-color: #373740;
+  border: 1px solid #373740;
   thead {
     tr {
       th {
         text-align: inherit;
-        border-top: 1px solid #454d55;
+        border-top: 1px solid #32333d;
         padding: 0.75rem;
         vertical-align: bottom;
-        border-bottom: 2px solid #454d55;
+        border-bottom: 2px solid #32333d;
       }
     }
   }
   tbody {
     > tr:nth-of-type(2n + 1) {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: #32333d;
     }
+
     tr {
       td {
-        border-top: 1px solid #454d55;
+        border-top: 1px solid #32333d;
         padding: 0.75rem;
 
         &.html5 {
-          width: 20%;
+          position: relative;
+          margin-right: 2em;
         }
         &.html5::after {
           content: "";
-          background: url(/img/html5.png) no-repeat;
+          background: url(/img/logos/html-5.svg) no-repeat;
+          background-size: auto;
           background-size: 100%;
-          width: 20px;
-          height: 20px;
+          width: 2.9em;
+          height: 1.6em;
           display: inline-block;
-          position: relative;
-          top: 3px;
+          position: absolute;
+          right: -0.4em;
+          bottom: 0;
         }
       }
     }
   }
-}
-
-@media only screen and (min-width: 600px) {
-}
-
-@media only screen and (min-width: 768px) {
 }

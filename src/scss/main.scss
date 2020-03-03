@@ -3,98 +3,10 @@
 //@import "theme/landing_page.scss";
 
 // Widgets
-//@import "widgets/table.scss";
-
-.array {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  align-items: center;
-  column-gap: 15px;
-  row-gap: 15px;
-  padding: 30px;
-  background: #32333d;
-  border-top: 30px #27272f solid;
-
-  div {
-    height: 240px;
-    background-color: #373740;
-
-    &:hover {
-      background-color: #336a90;
-      img {
-        height: 220px;
-        margin: 10px auto;
-      }
-    }
-
-    img {
-      height: 160px;
-      display: block;
-      margin: 40px auto;
-      transition: 0.5s ease;
-    }
-  }
-}
-
-$margin-sm: 16px;
-$margin-md: 24px;
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: $margin-sm;
-  row-gap: $margin-sm;
-  margin-left: $margin-sm;
-  margin-right: $margin-sm;
-
-  @media only screen and (min-width: 600px) {
-    grid-template-columns: repeat(8, 1fr);
-    column-gap: $margin-md;
-    row-gap: $margin-md;
-    margin-left: $margin-md;
-    margin-right: $margin-md;
-  }
-
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .all {
-    grid-column: span 4;
-
-    @media only screen and (min-width: 600px) {
-      grid-column: span 8;
-    }
-
-    @media only screen and (min-width: 768px) {
-      grid-column: span 12;
-    }
-  }
-
-  .full {
-    grid-column: span 4;
-    margin-left: -$margin-sm;
-    margin-right: -$margin-sm;
-    padding-left: $margin-sm;
-    padding-right: $margin-sm;
-
-    @media only screen and (min-width: 600px) {
-      grid-column: span 8;
-      margin-left: -$margin-md;
-      margin-right: -$margin-md;
-      padding-left: $margin-md;
-      padding-right: $margin-md;
-    }
-
-    @media only screen and (min-width: 768px) {
-      grid-column: span 12;
-    }
-  }
-}
-
-body {
-  background-color: #424250;
-}
+@import "widgets/table.scss";
+@import "widgets/grid.scss";
+@import "widgets/array.scss";
+@import "widgets/browsers.scss";
 
 h2 {
   height: 52px;
@@ -107,5 +19,17 @@ h2 {
     top: 10%;
     left: 50%;
     top: 5rem;
+  }
+}
+
+.tags {
+  h2 {
+    font-size: 32px;
+    color: white;
+    line-height: 2em;
+  }
+  code {
+    font-family: monospace;
+    padding-right: 25px;
   }
 }

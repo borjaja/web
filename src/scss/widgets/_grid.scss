@@ -1,0 +1,57 @@
+$margin-sm: 16px;
+$margin-md: 24px;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: $margin-sm;
+  row-gap: $margin-sm;
+  margin-left: $margin-sm;
+  margin-right: $margin-sm;
+
+  @media only screen and (min-width: 600px) {
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: $margin-md;
+    row-gap: $margin-md;
+    margin-left: $margin-md;
+    margin-right: $margin-md;
+  }
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .all {
+    display: block;
+    grid-column: span 4;
+
+    @media only screen and (min-width: 600px) {
+      grid-column: span 8;
+    }
+
+    @media only screen and (min-width: 768px) {
+      grid-column: span 12;
+    }
+  }
+
+  .full {
+    display: block;
+    grid-column: span 4;
+    margin-left: -$margin-sm;
+    margin-right: -$margin-sm;
+    padding-left: $margin-sm;
+    padding-right: $margin-sm;
+
+    @media only screen and (min-width: 600px) {
+      grid-column: span 8;
+      margin-left: -$margin-md;
+      margin-right: -$margin-md;
+      padding-left: $margin-md;
+      padding-right: $margin-md;
+    }
+
+    @media only screen and (min-width: 768px) {
+      grid-column: span 12;
+    }
+  }
+}

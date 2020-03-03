@@ -1,0 +1,10 @@
+.browsers {
+  $this: &;
+  td {
+    width: 100%;
+
+    #{$this}__img {
+      width: 25px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.array {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 15px;
+  padding: 30px;
+  background: #32333d;
+  border-top: 30px #27272f solid;
+
+  div {
+    height: 240px;
+    background-color: #373740;
+
+    &:hover {
+      background-color: #336a90;
+      img {
+        height: 220px;
+        margin: 10px auto;
+      }
+    }
+
+    img {
+      height: 160px;
+      display: block;
+      margin: 40px auto;
+      transition: 0.5s ease;
+    }
+  }
+}
