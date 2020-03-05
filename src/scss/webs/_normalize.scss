@@ -1,0 +1,86 @@
+// 1.Box sizing
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// 2.Removing margins and paddings
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+// 3.Lists
+ul {
+  list-style: none;
+}
+
+// 4.Forms and buttons
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+input,
+textarea,
+button {
+  border: 1px solid gray;
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent;
+}
+
+button * {
+  pointer-events: none;
+}
+
+// 5.Images and embeds
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+// 6.Tables
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+// 7.The hidden attribute
+[hidden] {
+  display: none !important;
+}
+
+// 8.Noscript
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

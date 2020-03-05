@@ -1,34 +1,152 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+input,
+textarea,
+select,
+button {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit; }
+
+input,
+textarea,
+button {
+  border: 1px solid gray;
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent; }
+
+button * {
+  pointer-events: none; }
+
+embed,
+iframe,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%; }
+
+table {
+  table-layout: fixed;
+  width: 100%; }
+
+[hidden] {
+  display: none !important; }
+
+noscript {
+  display: block;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
 .virgin {
   background: url(/img/webs/virgin/background.webp) #fff;
   margin: 0; }
-  .virgin .main {
+  .virgin header {
+    height: 60px;
+    background-color: #2d2d2d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .virgin header .row {
+      display: grid;
+      grid-template-columns: 70px 20px 1fr 122px 225px 40px 18px;
+      grid-template-rows: 60px;
+      grid-template-areas: "logo . menu . social . search"; }
+      .virgin header .row img {
+        width: 70px;
+        height: 60px;
+        background: #e10a0a;
+        grid-area: logo; }
+      .virgin header .row nav {
+        grid-area: menu; }
+        .virgin header .row nav .category {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 100%; }
+          .virgin header .row nav .category li p {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 13px;
+            min-width: 77px;
+            font-family: "Montserrat", sans-serif; }
+      .virgin header .row .social-links {
+        grid-area: social;
+        background-color: greenyellow; }
+      .virgin header .row .search {
+        grid-area: search;
+        background-color: yellow; }
+  .virgin main {
     height: 1500px;
     margin-top: 60px;
     background: url(/img/webs/virgin/frame.webp) no-repeat;
     background-size: 1500px auto;
     background-position: 50% 0; }
-    .virgin .main .row {
+    .virgin main .row {
       display: grid;
       column-gap: 76px;
       row-gap: 27px;
       grid-template-columns: 1fr 314px;
-      grid-template-rows: 180px 95px 1fr;
+      grid-template-rows: 180px 94px 1fr;
       grid-template-areas: ". ." "content ." "content widgets"; }
-      .virgin .main .row .content {
+      .virgin main .row .content {
         height: 100%;
         background-color: blue;
         grid-area: content; }
-      .virgin .main .row .widgets {
+        .virgin main .row .content h2 {
+          position: absolute !important;
+          height: 1px;
+          width: 1px;
+          overflow: hidden;
+          clip: rect(1px 1px 1px 1px); }
+      .virgin main .row .widgets {
         height: 100%;
         background-color: green;
         grid-area: widgets; }
+        .virgin main .row .widgets h2 {
+          position: absolute !important;
+          height: 1px;
+          width: 1px;
+          overflow: hidden;
+          clip: rect(1px 1px 1px 1px); }
   .virgin footer {
     height: 200px;
     background-color: red; }
     .virgin footer .row {
       background: indianred; }
-  .virgin .main .row,
+  .virgin header .row,
+  .virgin main .row,
   .virgin footer .row {
-    max-width: 1238px;
+    max-width: 1258px;
     height: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 10px; }
