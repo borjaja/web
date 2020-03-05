@@ -1,0 +1,34 @@
+.virgin {
+  background: url(/img/webs/virgin/background.webp) #fff;
+  margin: 0; }
+  .virgin .main {
+    height: 1500px;
+    margin-top: 60px;
+    background: url(/img/webs/virgin/frame.webp) no-repeat;
+    background-size: 1500px auto;
+    background-position: 50% 0; }
+    .virgin .main .row {
+      display: grid;
+      column-gap: 76px;
+      row-gap: 27px;
+      grid-template-columns: 1fr 314px;
+      grid-template-rows: 180px 95px 1fr;
+      grid-template-areas: ". ." "content ." "content widgets"; }
+      .virgin .main .row .content {
+        height: 100%;
+        background-color: blue;
+        grid-area: content; }
+      .virgin .main .row .widgets {
+        height: 100%;
+        background-color: green;
+        grid-area: widgets; }
+  .virgin footer {
+    height: 200px;
+    background-color: red; }
+    .virgin footer .row {
+      background: indianred; }
+  .virgin .main .row,
+  .virgin footer .row {
+    max-width: 1238px;
+    height: 100%;
+    margin: 0 auto; }

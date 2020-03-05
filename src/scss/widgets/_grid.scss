@@ -22,7 +22,7 @@ $margin-md: 24px;
   }
 
   .all {
-    display: block;
+    display: inline-block;
     grid-column: span 4;
 
     @media only screen and (min-width: 600px) {
@@ -35,7 +35,7 @@ $margin-md: 24px;
   }
 
   .full {
-    display: block;
+    display: inline-block;
     grid-column: span 4;
     margin-left: -$margin-sm;
     margin-right: -$margin-sm;

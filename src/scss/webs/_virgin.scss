@@ -1,0 +1,50 @@
+.virgin {
+  background: url(/img/webs/virgin/background.webp) #fff;
+  margin: 0;
+  header {
+    nav {
+    }
+  }
+  .main {
+    height: 1500px;
+    margin-top: 60px;
+    background: url(/img/webs/virgin/frame.webp) no-repeat;
+    background-size: 1500px auto;
+    background-position: 50% 0;
+    .row {
+      display: grid;
+      column-gap: 76px;
+      row-gap: 27px;
+      grid-template-columns: 1fr 314px;
+      grid-template-rows: 180px 95px 1fr;
+      grid-template-areas:
+        ". ."
+        "content ."
+        "content widgets";
+      .content {
+        height: 100%;
+        background-color: blue;
+        grid-area: content;
+      }
+      .widgets {
+        height: 100%;
+        background-color: green;
+        grid-area: widgets;
+      }
+    }
+  }
+  footer {
+    height: 200px;
+    background-color: red;
+    .row {
+      background: indianred;
+    }
+  }
+
+  .main .row,
+  footer .row {
+    max-width: 1238px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
