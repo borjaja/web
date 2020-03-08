@@ -19,9 +19,12 @@
 
     .row {
       display: grid;
-      grid-template-columns: 70px 20px 1fr 122px 225px 40px 18px;
+      grid-template-columns: 70px 20px 1fr 105px 225px 40px 18px;
       grid-template-rows: 60px;
       grid-template-areas: "logo . menu . social . search";
+      * {
+        z-index: 2;
+      }
       img {
         width: 70px;
         height: 60px;
@@ -30,6 +33,7 @@
       }
       nav {
         grid-area: menu;
+        margin-top: 10px;
         .category {
           $cat: &;
           display: flex;
@@ -42,10 +46,24 @@
               text-transform: uppercase;
               font-size: 13px;
               min-width: 77px;
-              //display: block;
-              //padding: 10px 10px 0 10px;
-              //position: relative;
+              position: relative;
+              padding: 0 10px 4px 16px;
               font-family: "Montserrat", sans-serif;
+            }
+            &.arrow {
+              p {
+                padding-right: 25px;
+                &::after {
+                  content: "";
+                  border-style: solid;
+                  border-width: 7px 5px 0;
+                  border-color: #ffffff transparent transparent transparent;
+                  color: #fff;
+                  position: absolute;
+                  right: 5px;
+                  top: 5px;
+                }
+              }
             }
             #{$cat}__subcategory {
             }
@@ -63,7 +81,6 @@
     }
   }
   main {
-    height: 1500px;
     margin-top: 60px;
     background: url(/img/webs/virgin/frame.webp) no-repeat;
     background-size: 1500px auto;
@@ -82,7 +99,7 @@
         height: 100%;
         background-color: blue;
         grid-area: content;
-        h2 {
+        h1 {
           @include hidden;
         }
       }

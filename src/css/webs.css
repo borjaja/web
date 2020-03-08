@@ -78,16 +78,19 @@ noscript {
     width: 100%; }
     .virgin header .row {
       display: grid;
-      grid-template-columns: 70px 20px 1fr 122px 225px 40px 18px;
+      grid-template-columns: 70px 20px 1fr 105px 225px 40px 18px;
       grid-template-rows: 60px;
       grid-template-areas: "logo . menu . social . search"; }
+      .virgin header .row * {
+        z-index: 2; }
       .virgin header .row img {
         width: 70px;
         height: 60px;
         background: #e10a0a;
         grid-area: logo; }
       .virgin header .row nav {
-        grid-area: menu; }
+        grid-area: menu;
+        margin-top: 10px; }
         .virgin header .row nav .category {
           display: flex;
           justify-content: space-evenly;
@@ -98,7 +101,20 @@ noscript {
             text-transform: uppercase;
             font-size: 13px;
             min-width: 77px;
+            position: relative;
+            padding: 0 10px 4px 20px;
             font-family: "Montserrat", sans-serif; }
+          .virgin header .row nav .category li.arrow p {
+            padding-right: 25px; }
+            .virgin header .row nav .category li.arrow p::after {
+              content: "";
+              border-style: solid;
+              border-width: 7px 5px 0;
+              border-color: #ffffff transparent transparent transparent;
+              color: #fff;
+              position: absolute;
+              right: 5px;
+              top: 5px; }
       .virgin header .row .social-links {
         grid-area: social;
         background-color: greenyellow; }
@@ -106,7 +122,6 @@ noscript {
         grid-area: search;
         background-color: yellow; }
   .virgin main {
-    height: 1500px;
     margin-top: 60px;
     background: url(/img/webs/virgin/frame.webp) no-repeat;
     background-size: 1500px auto;
@@ -122,7 +137,7 @@ noscript {
         height: 100%;
         background-color: blue;
         grid-area: content; }
-        .virgin main .row .content h2 {
+        .virgin main .row .content h1 {
           position: absolute !important;
           height: 1px;
           width: 1px;
